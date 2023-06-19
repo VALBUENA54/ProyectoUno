@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="300.0" style="-fx-background-color: #272776;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="juego.Controles.CategoriasController">
+   <children>
+      <Text fill="#e1d7d7" layoutX="62.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CATEGORIAS" wrappingWidth="176.13671875">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="207.0" fitWidth="200.0" layoutX="50.0" layoutY="61.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Imagenes/Imagen_2.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnSwitchWindow3" layoutX="42.0" layoutY="244.0" mnemonicParsing="false" onAction="#switchWindow3" prefHeight="25.0" prefWidth="217.0" text="TEORIA" />
+      <Button fx:id="btnSwitchWindow4" layoutX="42.0" layoutY="283.0" mnemonicParsing="false" onAction="#switchWindow4" prefHeight="25.0" prefWidth="217.0" text="COMPONENTES" />
+      <Button fx:id="btnSwitchWindow5" layoutX="42.0" layoutY="323.0" mnemonicParsing="false" onAction="#switchWindow5" prefHeight="25.0" prefWidth="217.0" text="CIRCUITOS" />
+      <Button fx:id="btnSwitchWindow2" layoutX="24.0" layoutY="355.0" mnemonicParsing="false" onAction="#switchWindow2" text="Atras" />
+      <Label fx:id="lblUsuario" layoutX="45.0" layoutY="206.0" prefHeight="17.0" prefWidth="217.0" textFill="#f2ebeb" />
+   </children>
+</AnchorPane>

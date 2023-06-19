@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="400.0" style="-fx-background-color: #272776;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="juego.Controles.ComponentesController">
+   <children>
+      <Text fill="#e1d7d7" layoutX="99.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="COMPONENTES" wrappingWidth="220.13671875">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Text>
+      <RadioButton fx:id="btn1" layoutX="13.0" layoutY="194.0" mnemonicParsing="false" selected="true" text="Codensador" textFill="#e1d7d7">
+         <font>
+            <Font size="16.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="grupo1" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="btn2" layoutX="142.0" layoutY="194.0" mnemonicParsing="false" selected="true" text="Resistencia" textFill="#e1d7d7" toggleGroup="$grupo1">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="btn3" layoutX="267.0" layoutY="194.0" mnemonicParsing="false" selected="true" text="Compuerta" textFill="#e1d7d7" toggleGroup="$grupo1">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </RadioButton>
+      <Text fill="#e1d7d7" layoutX="34.0" layoutY="146.0" strokeType="OUTSIDE" strokeWidth="0.0" text="¿que componente electronico es el de la imagen?" textAlignment="CENTER" wrappingWidth="350.13671875">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Button layoutX="301.0" layoutY="463.0" mnemonicParsing="false" text="SIGUIENTE" />
+      <Button fx:id="btnswitchWindow7" layoutX="30.0" layoutY="463.0" mnemonicParsing="false" onAction="#switchWindow7" text="ATRAS" />
+      <ImageView fitHeight="81.0" fitWidth="157.0" layoutX="131.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Imagenes/Resistencias.jpg" />
+         </image>
+      </ImageView>
+      <RadioButton fx:id="btn4" layoutX="12.0" layoutY="399.0" mnemonicParsing="false" selected="true" text="Transistores" textFill="#e1d7d7">
+         <font>
+            <Font size="16.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="grupo2" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="btn5" layoutX="141.0" layoutY="399.0" mnemonicParsing="false" selected="true" text="Diodos" textFill="#e1d7d7" toggleGroup="$grupo2">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="btn6" layoutX="252.0" layoutY="399.0" mnemonicParsing="false" selected="true" text="Condensadores" textFill="#e1d7d7" toggleGroup="$grupo2">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </RadioButton>
+      <Text fill="#e1d7d7" layoutX="33.0" layoutY="351.0" strokeType="OUTSIDE" strokeWidth="0.0" text="¿que componente electronico es el de la imagen?" textAlignment="CENTER" wrappingWidth="350.13671875">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="81.0" fitWidth="157.0" layoutX="142.0" layoutY="250.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Imagenes/Condensador.jpg" />
+         </image>
+      </ImageView>
+      <Separator layoutX="24.0" layoutY="242.0" prefHeight="0.0" prefWidth="344.0" />
+   </children>
+</AnchorPane>

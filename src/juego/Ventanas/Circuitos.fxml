@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="400.0" style="-fx-background-color: #272776;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="juego.Controles.CircuitosController">
+   <children>
+      <Text fill="#e1d7d7" layoutX="131.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CIRCUITOS" wrappingWidth="169.13671875">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Text>
+      <RadioButton fx:id="btn1" layoutX="16.0" layoutY="130.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="378.0" selected="true" text="Circula mayor corriente por la resistencia de 1000 OHM" textFill="#e1d7d7">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="grupo" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="btn2" layoutX="16.0" layoutY="166.0" mnemonicParsing="false" selected="true" text="Circula mayor corriente por la resistencia de 2 OHM." textFill="#e1d7d7" toggleGroup="$grupo">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="btn3" layoutX="16.0" layoutY="209.0" mnemonicParsing="false" selected="true" text="Por ambas resistencias circula la misma corriente." textFill="#e1d7d7" toggleGroup="$grupo">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </RadioButton>
+      <Text fill="#e1d7d7" layoutX="16.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SI TIENES 2 RESISTENCIAS, UNA DE DOS OHM Y OTRA DE 1000OHM, SI SE APLICA A AMBAS EL MISMO VOLTAJE?" textAlignment="CENTER" wrappingWidth="372.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <Text fill="#e1d7d7" layoutX="11.0" layoutY="278.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" CUANDO DOS RESISTENCIAS SE CONECTAN EN SERIE?" textAlignment="CENTER" wrappingWidth="387.13671875">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <RadioButton fx:id="btn4" layoutX="19.0" layoutY="318.0" mnemonicParsing="false" selected="true" text="El voltaje a través de ella es igual." textFill="#e1d7d7">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="grupo2" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="btn5" layoutX="19.0" layoutY="355.0" mnemonicParsing="false" selected="true" text="Deben tener diferentes valores." textFill="#e1d7d7" toggleGroup="$grupo2">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="btn6" layoutX="19.0" layoutY="396.0" mnemonicParsing="false" selected="true" text="Existe el mismo camino para la intensidad." textFill="#e1d7d7" toggleGroup="$grupo2">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </RadioButton>
+      <Separator layoutX="20.0" layoutY="245.0" prefHeight="2.0" prefWidth="356.0" />
+      <Button layoutX="291.0" layoutY="453.0" mnemonicParsing="false" text="SIGUIENTE" />
+      <Button fx:id="btnswitchWindow8" layoutX="20.0" layoutY="453.0" mnemonicParsing="false" onAction="#switchWindow8" text="ATRAS" />
+   </children>
+</AnchorPane>
