@@ -27,3 +27,5 @@
       <Label fx:id="lblUsuario" layoutX="42.0" layoutY="190.0" prefHeight="55.0" prefWidth="217.0" textFill="#f2ebeb" />
    </children>
 </AnchorPane>
+
+

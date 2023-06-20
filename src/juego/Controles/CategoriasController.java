@@ -24,6 +24,16 @@ public class CategoriasController {
     private Button btnSwitchWindow2;
     @FXML
     private Label lblDatos;
+    @FXML
+    private Label puntosLabel;
+
+    private int puntos;
+
+    public void setPuntos(int puntos) {
+        this.puntos = puntos;
+        puntosLabel.setText(Integer.toString(puntos));
+    }
+
 
     public void setDatos(String datos) {
         lblDatos.setText(datos);
