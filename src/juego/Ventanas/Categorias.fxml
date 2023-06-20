@@ -24,7 +24,7 @@
       <Button fx:id="btnSwitchWindow4" layoutX="42.0" layoutY="283.0" mnemonicParsing="false" onAction="#switchWindow4" prefHeight="25.0" prefWidth="217.0" text="COMPONENTES" />
       <Button fx:id="btnSwitchWindow5" layoutX="42.0" layoutY="323.0" mnemonicParsing="false" onAction="#switchWindow5" prefHeight="25.0" prefWidth="217.0" text="CIRCUITOS" />
       <Button fx:id="btnSwitchWindow2" layoutX="24.0" layoutY="355.0" mnemonicParsing="false" onAction="#switchWindow2" text="Atras" />
-      <Label fx:id="lblUsuario" layoutX="42.0" layoutY="190.0" prefHeight="55.0" prefWidth="217.0" textFill="#f2ebeb" />
+      <Label fx:id="lblUsuario" layoutX="45.0" layoutY="206.0" prefHeight="17.0" prefWidth="217.0" textFill="#f2ebeb" />
    </children>
 </AnchorPane>
 
