@@ -11,6 +11,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.ToggleGroup;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 
@@ -41,6 +42,13 @@ public class CircuitosController {
 
     @FXML
     private ToggleGroup grupo2;
+       @FXML
+    private Text puntajeText;
+
+    // Método para recibir el puntaje desde el controlador anterior
+    public void setPuntaje(int puntaje) {
+        puntajeText.setText("Puntaje anterior: " + puntaje);
+    }
 
     @FXML
     void switchWindow8(ActionEvent event) {

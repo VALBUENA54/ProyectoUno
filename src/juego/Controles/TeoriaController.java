@@ -1,5 +1,8 @@
 package juego.Controles;
 
+import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -12,10 +15,6 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 public class TeoriaController {
-    @FXML
-    private Text puntosText;
-    
-    private int puntos = 0;
 
     @FXML
     private RadioButton btn1;
@@ -46,58 +45,26 @@ public class TeoriaController {
 
     @FXML
     private Button btnSwitchWindow6;
-    
-    
 
-   @FXML
-private void siguienteButtonClicked(ActionEvent event) {
-    // Verificar las respuestas seleccionadas
-    verificarRespuestas();
+    @FXML
+    private Button verificarButton;
 
-    // Continuar con la lógica para avanzar al siguiente paso del juego
-}
+    @FXML
+    private Text puntajeText;
 
-private void verificarRespuestas() {
-    int puntos = 0;
-
-    // Verificar el grupo de preguntas 1
-    RadioButton seleccion1 = (RadioButton) grupo1.getSelectedToggle();
-    if (seleccion1 != null) {
-        String respuestaSeleccionada1 = seleccion1.getText();
-        if (respuestaSeleccionada1.equals("btn2")) {
-            // La respuesta es correcta
-            puntos += 1;
-        }
-    }
-
-    // Verificar el grupo de preguntas 2
-    RadioButton seleccion2 = (RadioButton) grupo2.getSelectedToggle();
-    if (seleccion2 != null) {
-        String respuestaSeleccionada2 = seleccion2.getText();
-        if (respuestaSeleccionada2.equals("btn5")) {
-            // La respuesta es correcta
-            puntos += 1;
-        }
-    }
-
-    // Actualizar los puntos acumulados
-    this.puntos = puntos;
-    puntosText.setText(Integer.toString(puntos));
-}
+    private int puntaje = 0;
 
     @FXML
     private void initialize() {
-        siguienteButton.setDisable(true);
-
-        grupo1.selectedToggleProperty().addListener((observable, oldValue, newValue) -> {
-            siguienteButton.setDisable(false);
-        });
-
-        grupo2.selectedToggleProperty().addListener((observable, oldValue, newValue) -> {
-            siguienteButton.setDisable(false);
-        });
+        // Asignar identificador a la opción correcta
+        btn1.setId("opcion1");
+        btn2.setId("opcion2");
+        btn3.setId("opcion3");
+        btn4.setId("opcion1");
+        btn5.setId("opcion2");
+        btn6.setId("opcion3");
     }
-    
+
     @FXML
     private void SwitchWindow6(ActionEvent event) {
         try {
@@ -107,9 +74,6 @@ private void verificarRespuestas() {
 
             // Obtener el controlador de la nueva ventana
             CategoriasController categoriasController = loader.getController();
-
-            // Pasar los puntos acumulados al controlador de la nueva ventana
-            categoriasController.setPuntos(puntos);
 
             // Crear una nueva escena con la vista cargada
             Scene scene = new Scene(root);
@@ -123,5 +87,48 @@ private void verificarRespuestas() {
             e.printStackTrace();
         }
     }
+
+@FXML
+private void verificarRespuestas(ActionEvent event) {
+    // Verificar la opción seleccionada
+    String opcionSeleccionada1 = ((RadioButton) grupo1.getSelectedToggle()).getId();
+    String opcionSeleccionada2 = ((RadioButton) grupo2.getSelectedToggle()).getId();
+
+    int puntajeGrupo1 = 0;
+    int puntajeGrupo2 = 0;
+
+    // Verificar respuestas para el grupo 1
+    if (opcionSeleccionada1.equals("opcion1")) {
+        puntajeGrupo1 += 5;
+    }
+
+    // Verificar respuestas para el grupo 2
+    if (opcionSeleccionada2.equals("opcion2")) {
+        puntajeGrupo2 += 5;
+    }
+
+    // Calcular el puntaje total sumando los puntajes de los grupos
+    int puntajeTotal = puntajeGrupo1 + puntajeGrupo2;
+    puntaje += puntajeTotal;
+
+    puntajeText.setText("Puntaje: " + puntaje);
+
+    // Redirigir a otra ventana después de verificar las respuestas
+    try {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/juego/Ventanas/Circuitos.fxml"));
+        Parent root = loader.load();
+
+        CircuitosController CircuitosController = loader.getController();
+
+        // Pasa el puntaje al controlador de la otra ventana (si es necesario)
+        CircuitosController.setPuntaje(puntaje);
+
+        Scene scene = new Scene(root);
+        Stage stage = (Stage) verificarButton.getScene().getWindow();
+        stage.setScene(scene);
+    } catch (IOException e) {
+        e.printStackTrace();
+    }
+}
 }
 

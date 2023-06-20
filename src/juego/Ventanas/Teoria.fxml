@@ -20,7 +20,7 @@
             <Font size="18.0" />
          </font>
       </Text>
-      <Button fx:id="siguienteButton" layoutX="301.0" layoutY="463.0" mnemonicParsing="false" text="SIGUIENTE" />
+      <Button fx:id="verificarButton" layoutX="301.0" layoutY="463.0" mnemonicParsing="false" onAction="#verificarRespuestas" text="SIGUIENTE" />
       <Button fx:id="btnSwitchWindow6" layoutX="30.0" layoutY="461.0" mnemonicParsing="false" onAction="#SwitchWindow6" text="ATRAS" />
       <Separator layoutX="53.0" layoutY="248.0" prefHeight="3.0" prefWidth="293.0" />
       <Text fill="#e1d7d7" layoutX="122.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" text="945 - 1967" textAlignment="CENTER" wrappingWidth="101.0">
@@ -90,5 +90,6 @@
          </font>
       </RadioButton>
       <Text fx:id="puntosText" layoutX="284.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="94.0" />
+      <Text fx:id="puntajeText" layoutX="178.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="52.0" />
    </children>
 </AnchorPane>
