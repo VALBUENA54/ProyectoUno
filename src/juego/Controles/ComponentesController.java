@@ -6,12 +6,15 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.ToggleGroup;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
+
 public class ComponentesController {
-      @FXML
+    private int puntaje = 0;
+  
+    @FXML
     private RadioButton btn1;
 
     @FXML
@@ -37,9 +40,15 @@ public class ComponentesController {
 
     @FXML
     private ToggleGroup grupo2;
+    
+    @FXML
+    private Text puntajeText;
 
-
-   
+    // Método para recibir el puntaje desde el controlador anterior
+    public void setPuntaje(int puntaje) {
+        puntajeText.setText("Puntaje anterior: " + puntaje);
+        this.puntaje = puntaje;
+    }
 
     @FXML
     void switchWindow7(ActionEvent event) {
@@ -59,7 +68,23 @@ public class ComponentesController {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
     }
 
+    // Método para mostrar el puntaje total
+    @FXML
+    void mostrarPuntajeTotal(ActionEvent event) {
+        puntajeText.setText("Puntaje total: " + puntaje);
+    }
+
+    @FXML
+    void initialize() {
+        // Asignar identificador a la opción correcta
+        btn1.setId("opcion1");
+        btn2.setId("opcion2");
+        btn3.setId("opcion3");
+        btn4.setId("opcion1");
+        btn5.setId("opcion2");
+        btn6.setId("opcion3");
+    }
 }
+

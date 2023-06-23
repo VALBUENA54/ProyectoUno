@@ -20,15 +20,15 @@
             <Font size="14.0" />
          </font>
          <toggleGroup>
-            <ToggleGroup fx:id="grupo" />
+            <ToggleGroup fx:id="grupo1" />
          </toggleGroup>
       </RadioButton>
-      <RadioButton fx:id="btn2" layoutX="16.0" layoutY="166.0" mnemonicParsing="false" selected="true" text="Circula mayor corriente por la resistencia de 2 OHM." textFill="#e1d7d7" toggleGroup="$grupo">
+      <RadioButton fx:id="btn2" layoutX="16.0" layoutY="166.0" mnemonicParsing="false" selected="true" text="Circula mayor corriente por la resistencia de 2 OHM." textFill="#e1d7d7" toggleGroup="$grupo1">
          <font>
             <Font size="14.0" />
          </font>
       </RadioButton>
-      <RadioButton fx:id="btn3" layoutX="16.0" layoutY="209.0" mnemonicParsing="false" selected="true" text="Por ambas resistencias circula la misma corriente." textFill="#e1d7d7" toggleGroup="$grupo">
+      <RadioButton fx:id="btn3" layoutX="16.0" layoutY="209.0" mnemonicParsing="false" selected="true" text="Por ambas resistencias circula la misma corriente." textFill="#e1d7d7" toggleGroup="$grupo1">
          <font>
             <Font size="14.0" />
          </font>
@@ -62,8 +62,8 @@
          </font>
       </RadioButton>
       <Separator layoutX="20.0" layoutY="245.0" prefHeight="2.0" prefWidth="356.0" />
-      <Button layoutX="291.0" layoutY="453.0" mnemonicParsing="false" text="SIGUIENTE" />
+      <Button fx:id="verificarButton" layoutX="291.0" layoutY="453.0" mnemonicParsing="false" onAction="#verificarRespuestas2" text="SIGUIENTE" />
       <Button fx:id="btnswitchWindow8" layoutX="20.0" layoutY="453.0" mnemonicParsing="false" onAction="#switchWindow8" text="ATRAS" />
-      <Text fx:id="puntajeText" layoutX="35.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Text fx:id="puntajeText" fill="#eee7e7" layoutX="96.0" layoutY="470.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="169.13671875" />
    </children>
 </AnchorPane>
