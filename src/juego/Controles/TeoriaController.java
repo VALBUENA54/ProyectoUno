@@ -88,47 +88,48 @@ public class TeoriaController {
         }
     }
 
-@FXML
-private void verificarRespuestas(ActionEvent event) {
-    // Verificar la opción seleccionada
-    String opcionSeleccionada1 = ((RadioButton) grupo1.getSelectedToggle()).getId();
-    String opcionSeleccionada2 = ((RadioButton) grupo2.getSelectedToggle()).getId();
+    @FXML
+    private void verificarRespuestas(ActionEvent event) {
+        // Verificar la opción seleccionada
+        String opcionSeleccionada1 = ((RadioButton) grupo1.getSelectedToggle()).getId();
+        String opcionSeleccionada2 = ((RadioButton) grupo2.getSelectedToggle()).getId();
 
-    int puntajeGrupo1 = 0;
-    int puntajeGrupo2 = 0;
+        int puntajeGrupo1 = 0;
+        int puntajeGrupo2 = 0;
 
-    // Verificar respuestas para el grupo 1
-    if (opcionSeleccionada1.equals("opcion1")) {
-        puntajeGrupo1 += 5;
-    }
+        // Verificar respuestas para el grupo 1
+        if (opcionSeleccionada1.equals("opcion1")) {
+            puntajeGrupo1 += 5;
+        }
 
-    // Verificar respuestas para el grupo 2
-    if (opcionSeleccionada2.equals("opcion2")) {
-        puntajeGrupo2 += 5;
-    }
+        // Verificar respuestas para el grupo 2
+        if (opcionSeleccionada2.equals("opcion2")) {
+            puntajeGrupo2 += 5;
+        }
 
-    // Calcular el puntaje total sumando los puntajes de los grupos
-    int puntajeTotal = puntajeGrupo1 + puntajeGrupo2;
-    puntaje += puntajeTotal;
+        // Calcular el puntaje total sumando los puntajes de los grupos
+        int puntajeTotal = puntajeGrupo1 + puntajeGrupo2;
+        puntaje += puntajeTotal;
 
-    puntajeText.setText("Puntaje: " + puntaje);
+        puntajeText.setText("Puntaje: " + puntaje);
 
-    // Redirigir a otra ventana después de verificar las respuestas
-    try {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/juego/Ventanas/Circuitos.fxml"));
-        Parent root = loader.load();
+        // Redirigir a otra ventana después de verificar las respuestas
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/juego/Ventanas/Circuitos.fxml"));
+            Parent root = loader.load();
 
-        CircuitosController CircuitosController = loader.getController();
+            CircuitosController circuitosController = loader.getController();
 
-        // Pasa el puntaje al controlador de la otra ventana (si es necesario)
-        CircuitosController.setPuntaje(puntaje);
+            // Pasar el puntaje al controlador de la otra ventana
+            circuitosController.setPuntaje(puntaje);
 
-        Scene scene = new Scene(root);
-        Stage stage = (Stage) verificarButton.getScene().getWindow();
-        stage.setScene(scene);
-    } catch (IOException e) {
-        e.printStackTrace();
+            Scene scene = new Scene(root);
+            Stage stage = (Stage) verificarButton.getScene().getWindow();
+            stage.setScene(scene);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
-}
+
 

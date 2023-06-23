@@ -89,7 +89,7 @@
             <Font size="19.0" />
          </font>
       </RadioButton>
-      <Text fx:id="puntosText" layoutX="284.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="94.0" />
+      <Text fx:id="puntosText" fill="#f5efef" layoutX="284.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="94.0" />
       <Text fx:id="puntajeText" layoutX="178.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="52.0" />
    </children>
 </AnchorPane>
