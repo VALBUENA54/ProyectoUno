@@ -7,12 +7,17 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="400.0" style="-fx-background-color: #272776;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="juego.Controles.FinalController">
    <children>
-      <Text fill="#e1d7d7" layoutX="115.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SU PUNTAJE TOTAL ES DE:" textAlignment="CENTER" wrappingWidth="193.0">
+      <Text fill="#f8f5f5" layoutX="37.0" layoutY="206.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ESCOJA OTRA CATEGORIA" textAlignment="CENTER" wrappingWidth="326.0">
          <font>
-            <Font size="16.0" />
+            <Font size="30.0" />
          </font>
       </Text>
-      <Button fx:id="btnswitchWindow8" layoutX="185.0" layoutY="434.0" mnemonicParsing="false" onAction="#switchWindow8" text="ATRAS" />
-      <Text fx:id="puntajeText" layoutX="127.0" layoutY="164.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="133.13671875" />
+      <Text fx:id="puntajeText" fill="#f5f0f0" layoutX="97.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="206.13671875">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Text>
+      <Button layoutX="22.0" layoutY="310.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="342.0" text="COMPONENTES" />
+      <Button layoutX="22.0" layoutY="381.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="342.0" text="CIRCUITOS" />
    </children>
 </AnchorPane>

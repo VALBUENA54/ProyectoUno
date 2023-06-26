@@ -28,7 +28,7 @@ public class FinalController {
     }
 
     public void mostrarPuntajeTotal() {
-        puntajeText.setText("Puntaje total: " + puntajeTotal);
+        puntajeText.setText("PUNTAJE: " + puntajeTotal);
     }
 
     public void setPuntajeTotal(int puntajeTotal) {
