@@ -41,16 +41,10 @@ public class TeoriaController {
     private ToggleGroup grupo2;
 
     @FXML
-    private Button siguienteButton;
-
-    @FXML
     private Button btnSwitchWindow6;
 
     @FXML
     private Button verificarButton;
-
-    @FXML
-    private Text puntajeText;
 
     private int puntaje = 0;
 
@@ -110,8 +104,6 @@ public class TeoriaController {
         // Calcular el puntaje total sumando los puntajes de los grupos
         int puntajeTotal = puntajeGrupo1 + puntajeGrupo2;
         puntaje += puntajeTotal;
-
-        puntajeText.setText("Puntaje: " + puntaje);
 
         // Redirigir a otra ventana después de verificar las respuestas
         try {

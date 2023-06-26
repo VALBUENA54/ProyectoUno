@@ -41,21 +41,14 @@ public class CircuitosController {
     private ToggleGroup grupo2;
 
     @FXML
-    private Button siguienteButton;
-
-    @FXML
     private Button btnSwitchWindow8;
 
     @FXML
     private Button verificarButton;
-
-    @FXML
-    private Text puntajeText;
-
     private int puntaje = 0;
-    private int puntaje2= 0;
+     private int puntaje2 = 0;
+      private int respuesta = 0;
 
-  
     @FXML
     private void initialize() {
         // Asignar identificador a la opción correcta
@@ -65,13 +58,6 @@ public class CircuitosController {
         btn4.setId("opcion1");
         btn5.setId("opcion2");
         btn6.setId("opcion3");
-
-    }
-
-    // Método para recibir el puntaje desde el controlador anterior
-    public void setPuntaje(int puntaje) {
-        puntajeText.setText("Puntaje anterior: " + puntaje);
-        this.puntaje = puntaje;
     }
 
     @FXML
@@ -118,11 +104,8 @@ public class CircuitosController {
 
         // Calcular el puntaje total sumando los puntajes de los grupos
         int puntajeTotal = puntajeGrupo1 + puntajeGrupo2;
-
-        // Acumular el puntaje
         puntaje2 += puntajeTotal;
-
-        puntajeText.setText("Puntaje: " + puntaje2);
+        respuesta = puntaje + puntaje2;
 
         // Redirigir a otra ventana después de verificar las respuestas
         try {
@@ -130,9 +113,7 @@ public class CircuitosController {
             Parent root = loader.load();
 
             ComponentesController componentesController = loader.getController();
-
-            // Pasa el puntaje al controlador de la otra ventana (si es necesario)
-            componentesController.setPuntaje(puntaje2);
+            componentesController.setPuntaje(respuesta);
 
             Scene scene = new Scene(root);
             Stage stage = (Stage) verificarButton.getScene().getWindow();
@@ -141,4 +122,9 @@ public class CircuitosController {
             e.printStackTrace();
         }
     }
+     public void setPuntaje(int puntaje) {
+       
+        this.puntaje = puntaje;
+    }
+    
 }
