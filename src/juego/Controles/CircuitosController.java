@@ -72,7 +72,7 @@ public class CircuitosController {
 
             // Crear una nueva escena con la vista cargada
             Scene scene = new Scene(root);
-
+          
             // Obtener el escenario principal (ventana) actual
             Stage stage = (Stage) btnSwitchWindow8.getScene().getWindow();
 
@@ -112,7 +112,7 @@ public class CircuitosController {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/juego/Ventanas/Componentes.fxml"));
             Parent root = loader.load();
 
-            ComponentesController componentesController = loader.getController();
+           ComponentesController componentesController = loader.getController();
             componentesController.setPuntaje(respuesta);
 
             Scene scene = new Scene(root);
